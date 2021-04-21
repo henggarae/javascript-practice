@@ -1,5 +1,21 @@
 const title = document.querySelector("#titlehtml");
-function handelClick(){
-    title.style.color = "blue";    
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    const currentClass=title.className;
+    console.log(currentClass);
+    if(currentClass !== CLICKED_CLASS){
+        title.className = CLICKED_CLASS
+    }else{
+        title.className="";
+    }
 }
-title.addEventListener("click", handelClick);
+
+
+
+function init() {
+    title.addEventListener("click", handleClick);
+
+}
+init();
