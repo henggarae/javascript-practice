@@ -3,13 +3,7 @@ const title = document.querySelector("#titlehtml");
 const CLICKED_CLASS = "clicked";
 
 function handleClick(){
-    const currentClass=title.className;
-    console.log(currentClass);
-    if(currentClass !== CLICKED_CLASS){
-        title.className = CLICKED_CLASS
-    }else{
-        title.className="";
-    }
+    title.classList.toggle(CLICKED_CLASS);
 }
 
 
